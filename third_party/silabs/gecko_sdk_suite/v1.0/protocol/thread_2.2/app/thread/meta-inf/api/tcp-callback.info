@@ -1,0 +1,16 @@
+#include PLATFORM_HEADER
+#include CONFIGURATION_HEADER
+#include EMBER_AF_API_STACK
+
+// Called when a connection is opened to serverPort.
+void emberTcpAcceptHandler(uint16_t serverPort, uint8_t fd)
+{
+}
+
+void emberTcpReadHandler(uint8_t fd, uint8_t *buffer, uint16_t count)
+{
+}
+
+void emberTcpStatusHandler(uint8_t fd, uint8_t status)
+{
+}

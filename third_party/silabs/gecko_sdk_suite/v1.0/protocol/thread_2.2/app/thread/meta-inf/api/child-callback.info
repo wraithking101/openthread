@@ -1,0 +1,24 @@
+#include PLATFORM_HEADER
+#include CONFIGURATION_HEADER
+#include EMBER_AF_API_STACK
+
+/** @brief A callback that allows the application to send a message in
+  * response to a poll from a child.
+  *
+  * This function is called when a child polls,
+  * provided that the pending message flag is set for that child
+  * (see ::emberSetMessageFlag(). The message should be sent to the child
+  * using ::emberSendUnicast() with the ::EMBER_APS_OPTION_POLL_RESPONSE option.
+  *
+  * If the application includes ::emberPollHanlder(), it must
+  * define EMBER_APPLICATION_HAS_POLL_HANDLER in its CONFIGURATION_HEADER.
+  *
+  * @param childId           The ID of the child that is requesting data.
+  *
+  * @param transmitExpected  true if the child is expecting an application-
+  *     supplied data message.  false otherwise.
+  *
+  */
+void emberPollHandler(EmberNodeId childId, bool transmitExpected)
+{
+}

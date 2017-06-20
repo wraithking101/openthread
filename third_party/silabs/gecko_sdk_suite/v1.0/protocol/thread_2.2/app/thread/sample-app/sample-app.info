@@ -1,0 +1,177 @@
+border-router {
+  name=Border Router
+  dir=border-router/border-router
+  isc=border-router/border-router/border-router.isc
+  architecture=unix
+  include=border-router-implementation.c
+  SL Thread: This application is a sample border router that can connect to the
+  sensor/actuator node application.  It allows routing of data from its network
+  to a Node.js server running on an external network.
+}
+
+cap-sense-switch {
+  name=Capacitive Touch Sensing Switch
+  dir=zcl/cap-sense-switch
+  isc=zcl/cap-sense-switch/cap-sense-switch.isc
+  architecture=em3587,simulation
+  include=cap-sense-switch-implementation.c
+  SL Thread: This application implements a capacitive sensing dimmer switch, intended to
+  be run on the Silicon Labs dimmer switch reference design hardware.  It
+  implements the On/Off, Level Control, and Color Control client clusters,
+  sending various commands over those clusters based on binding table entries.
+
+  This sample app differs from the switch sample application in that it is meant
+  to represent what a sleepy switch would look like as an end product, with
+  additional complexity and features not present in the switch sample
+  application.
+}
+
+client {
+  name=Client
+  dir=client-server/client
+  isc=client-server/client/client.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=client-implementation.c
+  SL Thread: This client application acts as a data sensor in a wireless sensor network.
+  It reports information to a server node that acts as a sink.
+}
+
+client-sleepy {
+  name=Client (Sleepy)
+  dir=client-server/client-sleepy
+  isc=client-server/client-sleepy/client-sleepy.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=client-sleepy-implementation.c
+  SL Thread: This client application acts as a sleepy data sensor in a wireless sensor
+  network.  It reports information to a server node that acts as a sink.
+}
+
+dimmable-light {
+  name=Dimmable Light
+  dir=zcl/dimmable-light
+  isc=zcl/dimmable-light/dimmable-light.isc
+  architecture=EFR32MG1P732F256GM32,em3585,simulation
+  include=dimmable-light-implementation.c
+  SL Thread: This dimmable light application implements a dimmable light bulb, intended to
+  be run on the Silicon Labs Dimmable Light reference design hardware.  It
+  implements the On/Off and Level Control servers and uses a single
+  PWM-controlled LED.
+
+  This sample app differs from the light sample application in that it is meant
+  to represent what a dimmable light would look like as an end product, with
+  additional complexity and features not present in the light sample
+  application.
+}
+
+light {
+  name=Light
+  dir=zcl/light
+  isc=zcl/light/light.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=light-implementation.c
+  SL Thread: This light application acts as a simple dimmable light in a ZCL network.  It
+  works with the switch sample application to demonstrate basic ZCL over IP
+  functionality in a Thread network.  A more complete example of a dimmable
+  light is available in the Dimmable Light reference design.
+}
+
+ncp-spi {
+  name=NCP SPI
+  dir=ncp/ncp-spi
+  isc=ncp/ncp-spi/ncp-spi.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=
+  SL Thread: This network coprocessor (NCP) application supports communication with a host
+  application over a SPI interface.  This NCP application can be built as
+  configured, or optionally can be augmented with customized extensions for
+  initialization, main loop processing, event definition/handling, and
+  messaging with the host.
+}
+
+ncp-uart-sw {
+  name=NCP UART (Software Flow Control)
+  dir=ncp/ncp-uart-sw
+  isc=ncp/ncp-uart-sw/ncp-uart-sw.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=
+  SL Thread: This network coprocessor (NCP) application supports communication with a host
+  application over a UART interface with software flow control. This NCP
+  application can be built as configured, or optionally can be augmented with
+  customized extensions for initialization, main loop processing, event
+  definition/handling, and messaging with the host.
+}
+
+ncp-uart-hw {
+  name=NCP UART HW (Hardware Flow Control)
+  dir=ncp/ncp-uart-hw
+  isc=ncp/ncp-uart-hw/ncp-uart-hw.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=
+  SL Thread: This network coprocessor (NCP) application supports communication with a host
+  application over a UART interface with hardware flow control. This NCP
+  application can be built as configured, or optionally can be augmented with
+  customized extensions for initialization, main loop processing, event
+  definition/handling, and messaging with the host.
+}
+
+sensor-actuator-node {
+  name=Sensor/Actuator Node (CoAP Sensor/Actuator Node)
+  dir=border-router/sensor-actuator-node
+  isc=border-router/sensor-actuator-node/sensor-actuator-node.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=sensor-actuator-node-implementation.c, displayconfigapp.h
+  SL Thread: This sensor/actuator node application is designed to work with the border
+  router sample application and its Node.js server.  This application reports
+  temperature and button 0 toggling to a Node.js server running on an external
+  network.  That Node.js server can also toggle the LED and sound the buzzer.
+  All communication is CoAP over IPv6.
+}
+
+server {
+  name=Server
+  dir=client-server/server
+  isc=client-server/server/server.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=server-implementation.c
+  SL Thread: This server application acts as a data sink in a wireless sensor network.  It
+  collects information from client nodes that act as sensors.
+}
+
+server-host {
+  name=Server (Host)
+  dir=client-server/server-host
+  isc=client-server/server-host/server-host.isc
+  architecture=unix
+  include=getData.php,sensors.html,server-host-implementation.c
+  SL Thread: This server application acts as a data sink in a wireless sensor network.  It
+  collects information from client nodes that act as sensors.
+}
+
+switch {
+  name=Switch
+  dir=zcl/switch
+  isc=zcl/switch/switch.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=switch-implementation.c
+  SL Thread: This switch application acts as a simple dimmer switch in a ZCL network.  It
+  works with the light sample application to demonstrate basic ZCL over IP
+  functionality in a Thread network.
+}
+
+test {
+  name=Test
+  dir=../test-app/test
+  isc=../test-app/test/test.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=test-implementation.c
+  SL Thread: This is a test application that is used in make test.
+}
+
+thread-test {
+  name=Thread Test Application
+  dir=thread-test/
+  isc=thread-test/thread-test.isc
+  architecture=efr32,em357,em3581,em3582,em3585,em3586,em3587,em3588,em3591,em3592,em3595,em3596,em3597,em3598,simulation
+  include=
+  SL Thread: This is the Thread Test application built from the framework.  The Thread Test application is used to test the stack against the GRL Thread Test Harness.  This sample app uses the Thread Test Harness CLI plugin which implements all the CLI commands neccessary to run the harness.
+}

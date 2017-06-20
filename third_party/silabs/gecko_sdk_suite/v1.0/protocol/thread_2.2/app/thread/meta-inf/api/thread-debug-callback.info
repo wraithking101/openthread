@@ -1,0 +1,84 @@
+void emberAddAddressDataReturn(uint16_t shortId)
+{
+}
+
+void emberAssertInfoReturn(const uint8_t *fileName, uint32_t lineNumber)
+{
+}
+
+void emberClearAddressCacheReturn(void)
+{
+}
+
+void emberConfigUartReturn(void)
+{
+}
+
+void emberEchoReturn(const uint8_t *data, uint8_t length)
+{
+}
+
+void emberGetMulticastEntryReturn(uint8_t lastSequence,
+                                  uint8_t windowBitmask,
+                                  uint8_t dwellQs,
+                                  const uint8_t *seed)
+{
+}
+
+void emberGetNetworkKeyInfoReturn(EmberStatus status,
+                                  uint32_t sequence,
+                                  uint8_t state)
+{
+}
+
+void emberGetNodeStatusReturn(EmberStatus status,
+                              uint8_t ripId,
+                              EmberNodeId nodeId,
+                              uint8_t parentRipId,
+                              EmberNodeId parentId,
+                              const uint8_t *networkFragmentIdentifier,
+                              uint32_t networkFrameCounter)
+{
+}
+
+void emberLookupAddressDataReturn(uint16_t shortId)
+{
+}
+
+void emberNcpUdpStormCompleteHandler(void)
+{
+}
+
+void emberNcpUdpStormReturn(EmberStatus status)
+{
+}
+
+void emberResetNcpAshReturn(void)
+{
+}
+
+void emberSendDoneReturn(void)
+{
+}
+
+void emberSetRandomizeMacExtendedIdReturn(void)
+{
+}
+
+void emberSetWakeupSequenceNumberReturn(void)
+{
+}
+
+void emberStartUartStormReturn(void)
+{
+}
+
+void emberStopUartStormReturn(void)
+{
+}
+
+void emberUartSpeedTestReturn(uint32_t totalBytesSent,
+                              uint32_t payloadBytesSent,
+                              uint32_t timeout)
+{
+}

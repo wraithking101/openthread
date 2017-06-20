@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentItems
+xmlns="http://www.silabs.com/ss/ContentItem.ecore"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.silabs.com/ss/ContentItem.ecore file:/C:/Users/CAOWENS/Documents/ssv4/contentItems.xsd">
+  <contentItemData
+    priority="9"
+    category="Getting Started"
+    itemURI="file:index.html"
+    label="Documentation Index"
+    description="Provides an overview and hyperlinks to all packaged documentation."
+  ></contentItemData>
+  <contentItemData
+    priority="3"
+    category="Release Notes"
+    itemURI="file:flex-release-notes.pdf"
+    label="Flex SDK Release Notes"
+    description="Flex: Lists compatibility requirements and sources for all software componentsin the development environment. Discusses the latest changes to the SiliconLabs Flex SDK, including added/deleted/deprecated features/API. Reviews bugs that have been fixed since the last release, and any pending ones. Intended for project managers and software developers."
+  ></contentItemData>
+  <contentItemData
+    priority="3"
+    category="Application Notes"
+    itemURI="file:AN902_ConnectLowPowerNetworks.pdf"
+    label="AN902: Building Low Power Networks with the Silicon Labs Connect Stack"
+    description="Flex: Illustrates techniques using the Silicon Labs Connect stack to reduce power consumption in a sensor network developed using the Silicon Labs Connect Stack. "
+  ></contentItemData>
+  <contentItemData
+    priority="1"
+    category="User's Guides"
+    itemURI="file:UG235-ConnectUserGuide.pdf"
+    label="UG235: Silicon Labs Connect User Guide"
+    description="Flex: Provides in-depth information for developers using the Silicon Labs Connect stack as a foundation for their application development on the Wireless Gecko (EFR32) portfolio or custom hardware. The Connect stack is delivered as part of the Silicon Labs Flex SDK. You should have already installed the Simplicity Studio development environment and the Flex SDK, and be familiar with the basics of configuring, compiling, and flashing Connect-based applications."
+  ></contentItemData>
+  <contentItemData
+    priority="1"
+    category="Fundamentals"
+    itemURI="file:UG103-12-AppDevFundamentals-Connect.pdf"
+    label="UG103-12: Fundamentals - Connect"
+    description="Flex: Describes the features and functions of the Silicon Labs Connect stack, including its device types, network topologies, and its 'building block' development methodology using plugins. "
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="User's Guides"
+    itemURI="file:UG147.pdf"
+    label="UG147: Flex Gecko 2.4 GHz, 20 dBm Range Test Demo Users Guide"
+    description="Flex: Provides an easy way to evaluate the link budget of the Wireless Gecko EFR32 devices using Silicon Labs RAIL (RAIL) by performing a range test between two nodes using Range Test, a standalone test application. The range test demo implements Packet Error Rate (PER) measurement."
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="API References"
+    itemURI="file:API_CONNECT_HTML/index.htm"
+    label="Silicon Labs Connect API Reference Guide"
+    description="Flex: Contains a comprehensive list of APIs used to interface to the Silicon Labs Connect stack. "
+  ></contentItemData>
+  <contentItemData
+    priority="5"
+    category="Application Notes"
+    itemURI="file:AN972.pdf"
+    label="AN972: EFR32 RF Evaluation Guide"
+    description="Flex: Describes using RAILTest to evaluate radio functionality, as well as peripherals, deep sleep states, etc. With it you can fully evaluate the receiving and transmitting performance and test RF functionality of development kit hardware or custom hardware."
+  ></contentItemData>
+  <contentItemData
+    priority="4"
+    category="Application Notes"
+    itemURI="file:AN844_ASHv3_Host_UART_Interface_Guide.pdf"
+    label="AN844: Host/Network Co-Processor Communications Using Silicon Labs Thread and Connect"
+    description="Flex: Describes how to set up and test UART communication between a host and Network Co-Processor (NCP) using ASHv3-UART. You should have a Raspberry Pi, USB cable (for UART communication), and a development board."
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="Fundamentals"
+    itemURI="file:UG103-13-AppDevFundamentals-RAIL.pdf"
+    label="UG103-13: Fundamentals - RAIL"
+    description="Flex: Describes the features and functions of Silicon Labs RAIL (Radio Abstraction Interface Layer). RAIL provides an intuitive, easily-customizable radio interface layer that is designed to support proprietary or standards-based wireless protocols. "
+  ></contentItemData>
+  <contentItemData
+    priority="3"
+    category="Application Development Fundamentals"
+    itemURI="file:UG103-01-AppDevFundamentals-WirelessNetwork.pdf"
+    label="UG103-01: Fundamentals - Wireless Networking"
+    description="Flex: Introduces some fundamental concepts of wireless networking. These concepts are referred to in other Fundamentals documents. If you are new to wireless networking, you should read this document first. "
+  ></contentItemData>
+  <contentItemData
+    priority="3"
+    category="Application Notes"
+    itemURI="file:AN971.pdf"
+    label="AN971: EFR32 Radio Configurator Guide"
+    description="Flex: Describes the radio configurator GUI for RAIL framework applications. With it, you can create standard or custom radio configurations on which to run your RAIL-based applications. The role of each GUI item is explained. "
+  ></contentItemData>
+  <contentItemData
+    priority="4"
+    category="User's Guides"
+    itemURI="file:RailTestUserGuide.html"
+    label="Using RAIL Test"
+    description="Flex: Describes the functionality available in the RAILTest application.  "
+  ></contentItemData>
+  <contentItemData
+    priority="1"
+    category="Quick Start Guides"
+    itemURI="file:qsg138-flex-efr32.pdf"
+    label="QSG138: Getting Started with the Silicon Labs Flex SDK for the Wireless Gecko (EFR32) Portfolio"
+    description="Flex: For the EFR32 portfolio, provides basic information on configuring, building, and installing applications using the Silicon Labs Flex SDK, which offers two paths to application development. One, using Silicon Labs Connect, provides a fully-featured, easily-customizable wireless networking solution. The other begins with Silicon Labs RAIL (Radio Abstraction Interface Layer), and offers a customizable radio interface layer designed to support proprietary or standards-based wireless protocols."
+  ></contentItemData>
+  <contentItemData
+    priority="5"
+    category="User's Guides"
+    itemURI="file:ug115-ashv3-protocol-reference.pdf"
+    label="UG115: ASHv3 Protocol Reference"
+    description="Flex: Describes the protocol used by the UART-based ASHv3 to carry commands and responses reliably between a host processor and a network co-processor.          "
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="Quick Start Guides"
+    itemURI="file:qsg137-flex-ezr32.pdf"
+    label="QSG137: Getting Started with the Silicon Labs Flex SDK for the EZR32"
+    description="Flex: For the EZR32, provides basic information on configuring, building, and installing applications with the Silicon Labs Flex SDK, using Silicon Labs Connect, a fully-featured, easily-customizable wireless networking solution. "
+  ></contentItemData>
+  <contentItemData
+    priority="1"
+    category="API References"
+    itemURI="file:API_RAIL_HTML/index.html"
+    label="Silicon Labs RAIL API Reference Guide"
+    description="Flex: Contains a comprehensive list of APIs used to interface to the Silicon Labs RAIL library. "
+  ></contentItemData>
+  <contentItemData
+    priority="4"
+    category="Fundamentals"
+    itemURI="file:UG103-03-AppDevFundamentals-DesignChoices.pdf"
+    label="UG103-03: Fundamentals - Design Choices"
+    description="Flex: Discusses the major decisions to be made about architecting a wireless networking solution, as well as additional decisions to be made if you are designing a ZigBee solution. "
+  ></contentItemData>
+</contentItems>

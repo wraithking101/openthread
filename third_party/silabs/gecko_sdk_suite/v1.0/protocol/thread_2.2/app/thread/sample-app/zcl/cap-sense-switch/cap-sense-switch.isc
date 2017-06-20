@@ -1,0 +1,359 @@
+#ISD afv6
+# ISD version: 4.12.0.qualifier
+
+# Application configuration
+appId: thread
+architecture: em3587
+deviceName: cap-sense-switch
+generationDirectory: PATH(ISC_RELATIVE):.
+
+# Devices
+device: EM3xx
+device: SoC
+device: Sleepy End Device
+device: ZCL/IP
+
+# Plugin configuration
+appPlugin: accelerometer-led=false
+appPlugin: adc=true
+appPlugin: address-configuration-debug=true
+appPlugin: antenna=false
+appPlugin: antenna-stub=true
+appPlugin: ash-v3=false
+appPlugin: ash-v3-stub=false
+appPlugin: basic-server=true
+appPlugin: battery-monitor=true
+appPlugin: bootload-cli=false
+appPlugin: bulb-pwm-driver=false
+appPlugin: bulb-ui=false
+appPlugin: button=true
+appPlugin: button-interface=true
+appPlugin: button-press=false
+appPlugin: button-stub=false
+appPlugin: buzzer=false
+appPlugin: buzzer-stub=false
+appPlugin: cjson=false
+appPlugin: cli=true
+appPlugin: coap-cli=true
+appPlugin: coap-debug=false
+appPlugin: coap-dispatch=true
+appPlugin: coexistence=false
+appPlugin: color-control-server=false
+appPlugin: command-interpreter2=true
+appPlugin: debug-print=true
+appPlugin: dhcp-client=true
+appPlugin: dhcp-library=true
+appPlugin: dhcp-stub-library=false
+appPlugin: diagnostic=true
+appPlugin: diagnostic-stub=false
+appPlugin: end-node-ui=true
+appPlugin: ext-device=false
+appPlugin: fem-control=false
+appPlugin: generic-interrupt-control=true
+appPlugin: glib=false
+appPlugin: global-address-prefix-debug=true
+appPlugin: gpio-sensor=false
+appPlugin: groups-server=false
+appPlugin: hal-library=true
+appPlugin: hal-ncp-library=false
+appPlugin: heartbeat=false
+appPlugin: heartbeat-node-type=false
+appPlugin: host-network-management=false
+appPlugin: host-network-management-stub=false
+appPlugin: humidity-si7021-stub=false
+appPlugin: i2c-driver=true
+appPlugin: i2c-driver-stub=false
+appPlugin: icmp-cli=true
+appPlugin: icmp-debug=true
+appPlugin: identify-server=true
+appPlugin: idle-sleep=true
+appPlugin: illuminance-measurement-server=false
+appPlugin: illuminance-si1141-stub=false
+appPlugin: infrared-led=false
+appPlugin: key-matrix=false
+appPlugin: led=true
+appPlugin: led-blink=true
+appPlugin: led-dim-pwm=false
+appPlugin: led-rgb-pwm=false
+appPlugin: led-stub=false
+appPlugin: led-temp-pwm=false
+appPlugin: level-control-server=false
+appPlugin: linked-list=false
+appPlugin: log-cli=true
+appPlugin: main=true
+appPlugin: mbedtls-library=true
+appPlugin: mfglib-library=true
+appPlugin: mfglib-stub-library=false
+appPlugin: microphone-codec-msadpcm=false
+appPlugin: microphone-imaadpcm=false
+appPlugin: mpsi=false
+appPlugin: mpsi-ipc=false
+appPlugin: mpsi-storage=false
+appPlugin: ncp-library=false
+appPlugin: ncp-spi-link=false
+appPlugin: ncp-uart-link=false
+appPlugin: network-management-cli=true
+appPlugin: occupancy-pyd1698=false
+appPlugin: occupancy-pyd1698-stub=false
+appPlugin: occupancy-sensing-server=false
+appPlugin: on-off-server=false
+appPlugin: paho.mqtt.c=false
+appPlugin: poll-control-client=false
+appPlugin: poll-control-server=false
+appPlugin: polling=true
+appPlugin: power-configuration-server=true
+appPlugin: psstore=false
+appPlugin: rail-library=true
+appPlugin: relative-humidity-measurement-server=false
+appPlugin: sb1-gesture-sensor=true
+appPlugin: scan-debug=true
+appPlugin: serial=true
+appPlugin: sim-eeprom1=false
+appPlugin: sim-eeprom2=true
+appPlugin: sim-eeprom2-1to2-upgrade=true
+appPlugin: sim-eeprom2-1to2-upgrade-stub=false
+appPlugin: slaac-client=true
+appPlugin: slot-manager=false
+appPlugin: stm32f103ret-library=false
+appPlugin: tamper-switch=false
+appPlugin: temperature-measurement-server=false
+appPlugin: temperature-si7053-stub=false
+appPlugin: tftp-bootload-target=false
+appPlugin: thread-stack=true
+appPlugin: thread-test-harness-cli=false
+appPlugin: transport-mqtt=false
+appPlugin: udp-cli=true
+appPlugin: udp-debug=true
+appPlugin: unix-library=false
+appPlugin: unix-netif-config=false
+appPlugin: version-debug=true
+appPlugin: zcl-core=true
+
+# Setup configurations
+{setupId:additionalFiles
+PATH(ISC_RELATIVE):cap-sense-switch-implementation.c
+}
+{setupId:boardHeader
+em3587=BOARD,em35x/ist-a39,,
+}
+{setupId:bookkeeping
+}
+{setupId:bootloader
+em3587=local-storage,
+}
+{setupId:callbackConfiguration
+emberAfTickCallback:false
+emberAfNetworkStatusCallback:false
+emberAfPluginIdleSleepOkToIdleCallback:false
+emberAfPluginSb1GestureSensorGestureReceivedCallback:false
+emberResumeNetworkReturn:false
+emberCommissionNetworkReturn:false
+emberJoinNetworkReturn:false
+emberAttachToNetworkReturn:false
+emberMainTickCallback:false
+emberAfPluginIdleSleepOkToSleepCallback:false
+emberAfPluginPollingOkToLongPollCallback:false
+emberZclGetPublicKeyCallback:false
+emberZclNotificationCallback:false
+}
+{setupId:coapDispatch
+}
+{setupId:commandLineConfiguration
+on
+}
+{setupId:debugConfiguration
+on
+area name off
+appSerial=1
+}
+{setupId:eventConfiguration
+stateEventControl,stateEventHandler
+frameTimeoutEventControl,frameTimeoutEventHandler
+}
+{setupId:halOptions
+}
+{setupId:hwConfig
+active=false
+}
+{setupId:information
+\{key:description
+Capacative Touch Sensing Switch Application
+
+This application implements a capacitive touch based dimmer switch, intended to be run on the Silicon Labs lighting reference design hardware.  It implements the On/Off, Level Control, and Color Control clients, sending various commands over those clusters based on binding table entries.  This design differs from the switch application in that it closer represents what a sleepy end device switch looks like as an end product.
+
+It uses out-of-band commissioning for network joining and EZ Mode commissioning for creating binding table entires.  The user interface is provided through the End Node User Interface plugin, which contains a description of how to use the pushbutton to trigger different types of network activity (start EZ Mode commissioning, perform network reset, etc.).
+
+The default out-of-band commissioning parameters match those of the border router reference design, which will allow the capacative touch sensing switch sample application to join the border router's network without need for modification.
+\}
+}
+{setupId:macros
+}
+{setupId:serial
+em3587=*0,*,*,*,*,*,*,1,false,*,*,*,*,*
+}
+{setupId:template
+}
+{setupId:token
+}
+{setupId:zclip
+beginAttrList:OPTIONAL
+  cl:0x0001, at:0x0020, di:server, mf:0x0000
+  cl:0x0020, at:0x0004, di:server, mf:0x0000
+  cl:0x0020, at:0x0005, di:server, mf:0x0000
+  cl:0x0020, at:0x0006, di:server, mf:0x0000
+endAttrList:OPTIONAL
+configuredNetwork:type:ZIGBEE_PRO, name:Primary
+beginEndpointType:Primary
+device:zcustom
+overrideClientCluster:0,no
+overrideClientCluster:1,no
+overrideClientCluster:2,no
+overrideClientCluster:3,yes
+overrideClientCluster:4,no
+overrideClientCluster:5,no
+overrideClientCluster:6,yes
+overrideClientCluster:7,no
+overrideClientCluster:8,yes
+overrideClientCluster:9,no
+overrideClientCluster:10,no
+overrideClientCluster:11,no
+overrideClientCluster:15,no
+overrideClientCluster:21,no
+overrideClientCluster:22,no
+overrideClientCluster:25,no
+overrideClientCluster:26,no
+overrideClientCluster:27,no
+overrideClientCluster:32,no
+overrideClientCluster:33,no
+overrideClientCluster:37,no
+overrideClientCluster:256,no
+overrideClientCluster:257,no
+overrideClientCluster:258,no
+overrideClientCluster:512,no
+overrideClientCluster:513,no
+overrideClientCluster:514,no
+overrideClientCluster:515,no
+overrideClientCluster:516,no
+overrideClientCluster:768,yes
+overrideClientCluster:769,no
+overrideClientCluster:1024,no
+overrideClientCluster:1025,no
+overrideClientCluster:1026,no
+overrideClientCluster:1027,no
+overrideClientCluster:1028,no
+overrideClientCluster:1029,no
+overrideClientCluster:1030,no
+overrideClientCluster:1280,no
+overrideClientCluster:1281,no
+overrideClientCluster:1282,no
+overrideClientCluster:1536,no
+overrideClientCluster:1537,no
+overrideClientCluster:1556,no
+overrideClientCluster:1557,no
+overrideClientCluster:1792,no
+overrideClientCluster:1793,no
+overrideClientCluster:1794,no
+overrideClientCluster:1795,no
+overrideClientCluster:1796,no
+overrideClientCluster:1797,no
+overrideClientCluster:1798,no
+overrideClientCluster:1799,no
+overrideClientCluster:1800,no
+overrideClientCluster:1801,no
+overrideClientCluster:1802,no
+overrideClientCluster:2048,no
+overrideClientCluster:2304,no
+overrideClientCluster:2305,no
+overrideClientCluster:2306,no
+overrideClientCluster:2307,no
+overrideClientCluster:2308,no
+overrideClientCluster:2309,no
+overrideClientCluster:2561,no
+overrideClientCluster:2562,no
+overrideClientCluster:2816,no
+overrideClientCluster:2817,no
+overrideClientCluster:2818,no
+overrideClientCluster:2819,no
+overrideClientCluster:2820,no
+overrideClientCluster:2821,no
+overrideClientCluster:4096,no
+overrideServerCluster:0,yes
+overrideServerCluster:1,yes
+overrideServerCluster:2,no
+overrideServerCluster:3,yes
+overrideServerCluster:4,no
+overrideServerCluster:5,no
+overrideServerCluster:6,no
+overrideServerCluster:7,no
+overrideServerCluster:8,no
+overrideServerCluster:9,no
+overrideServerCluster:10,no
+overrideServerCluster:11,no
+overrideServerCluster:15,no
+overrideServerCluster:21,no
+overrideServerCluster:22,no
+overrideServerCluster:25,no
+overrideServerCluster:26,no
+overrideServerCluster:27,no
+overrideServerCluster:32,no
+overrideServerCluster:33,no
+overrideServerCluster:37,no
+overrideServerCluster:256,no
+overrideServerCluster:257,no
+overrideServerCluster:258,no
+overrideServerCluster:512,no
+overrideServerCluster:513,no
+overrideServerCluster:514,no
+overrideServerCluster:515,no
+overrideServerCluster:516,no
+overrideServerCluster:768,no
+overrideServerCluster:769,no
+overrideServerCluster:1024,no
+overrideServerCluster:1025,no
+overrideServerCluster:1026,no
+overrideServerCluster:1027,no
+overrideServerCluster:1028,no
+overrideServerCluster:1029,no
+overrideServerCluster:1030,no
+overrideServerCluster:1280,no
+overrideServerCluster:1281,no
+overrideServerCluster:1282,no
+overrideServerCluster:1536,no
+overrideServerCluster:1537,no
+overrideServerCluster:1556,no
+overrideServerCluster:1557,no
+overrideServerCluster:1792,no
+overrideServerCluster:1793,no
+overrideServerCluster:1794,no
+overrideServerCluster:1795,no
+overrideServerCluster:1796,no
+overrideServerCluster:1797,no
+overrideServerCluster:1798,no
+overrideServerCluster:1799,no
+overrideServerCluster:1800,no
+overrideServerCluster:1801,no
+overrideServerCluster:1802,no
+overrideServerCluster:2048,no
+overrideServerCluster:2304,no
+overrideServerCluster:2305,no
+overrideServerCluster:2306,no
+overrideServerCluster:2307,no
+overrideServerCluster:2308,no
+overrideServerCluster:2309,no
+overrideServerCluster:2561,no
+overrideServerCluster:2562,no
+overrideServerCluster:2816,no
+overrideServerCluster:2817,no
+overrideServerCluster:2818,no
+overrideServerCluster:2819,no
+overrideServerCluster:2820,no
+overrideServerCluster:2821,no
+overrideServerCluster:4096,no
+endEndpointType
+configuredEndpoint:*ep:1,pi: 2222,di:8888,dv:0,ept:Primary,nwk:Primary
+}
+
+# Plugin options
+pluginOption(em3587): EMBER_ZCL_BINDING_TABLE_SIZE,50
+pluginOption(em3587): EMBER_AF_PLUGIN_SIM_EEPROM2_PASSWORD,!spoon
+pluginOption(em3587): EMBER_AF_PLUGIN_BUTTON_INTERFACE_BUTTON_TIMEOUT_MS,7000

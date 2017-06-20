@@ -1,0 +1,13 @@
+
+What's new in Flex 1.1.1.0:
+  * Improved OTA unicast reliability in Connect stack by enabling MAC layer acknowledges
+  * Fixed RAIL state machine issue with subsequent transmissions after failing scheduled transmission
+  * Fixed RAIL issue preventing setting zero relative delays on EFR32MG12 products
+  * Fixed RAIL issue preventing scheduled transmits with time delays less than the TX/RX warm times on EFR32MG12 products
+  
+What's new in Flex 1.1.0.0:
+  * Added support for new boards (BRD4103A, BRD4161A, BRD4162A, BRD4163A, BRD4164A, BRD4253A, BRD4254A) in Connect
+  * Added support for new boards (BRD4103A, BRD4158A, BRD4161A, BRD4162A, BRD4163A, BRD4164A, BRD4253A, BRD4254A) in RAIL
+  * Updated RAIL examples to the latest RAIL API
+  * Integrated Thunderboard Sense sample application
+  * Added FIFO mode support in RAIL

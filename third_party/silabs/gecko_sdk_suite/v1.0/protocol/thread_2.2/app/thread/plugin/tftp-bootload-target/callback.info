@@ -1,0 +1,6 @@
+#include PLATFORM_HEADER
+#include CONFIGURATION_HEADER
+#include EMBER_AF_API_STACK
+#include EMBER_AF_API_TFTP_BOOTLOADER
+
+bool emberVerifyBootloadRequest(const TftpBootloaderBootloadRequest *request);

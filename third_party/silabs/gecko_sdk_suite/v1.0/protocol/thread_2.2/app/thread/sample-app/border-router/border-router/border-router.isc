@@ -1,0 +1,292 @@
+#ISD afv6
+# ISD version: 4.12.0.qualifier
+
+# Application configuration
+appId: thread
+architecture: pc
+deviceName: border-router
+generationDirectory: PATH(ISC_RELATIVE):.
+
+# Devices
+device: Unix
+device: Host
+device: Router
+
+# Plugin configuration
+appPlugin: accelerometer-led=false
+appPlugin: adc=false
+appPlugin: address-configuration-debug=false
+appPlugin: antenna=false
+appPlugin: antenna-stub=false
+appPlugin: ash-v3=false
+appPlugin: ash-v3-stub=false
+appPlugin: basic-server=false
+appPlugin: battery-monitor=false
+appPlugin: bootload-cli=false
+appPlugin: bulb-pwm-driver=false
+appPlugin: bulb-ui=false
+appPlugin: button=false
+appPlugin: button-interface=false
+appPlugin: button-press=false
+appPlugin: button-stub=true
+appPlugin: buzzer=false
+appPlugin: buzzer-stub=true
+appPlugin: cjson=false
+appPlugin: cli=true
+appPlugin: coap-cli=true
+appPlugin: coap-debug=false
+appPlugin: coap-dispatch=true
+appPlugin: coexistence=false
+appPlugin: color-control-server=false
+appPlugin: command-interpreter2=true
+appPlugin: debug-print=true
+appPlugin: dhcp-client=true
+appPlugin: dhcp-library=false
+appPlugin: dhcp-stub-library=false
+appPlugin: diagnostic=false
+appPlugin: diagnostic-stub=false
+appPlugin: end-node-ui=false
+appPlugin: ext-device=false
+appPlugin: fem-control=false
+appPlugin: generic-interrupt-control=false
+appPlugin: glib=false
+appPlugin: global-address-prefix-debug=false
+appPlugin: gpio-sensor=false
+appPlugin: groups-server=false
+appPlugin: hal-library=false
+appPlugin: hal-ncp-library=false
+appPlugin: heartbeat=false
+appPlugin: heartbeat-node-type=false
+appPlugin: host-network-management=true
+appPlugin: host-network-management-stub=false
+appPlugin: humidity-si7021-stub=false
+appPlugin: i2c-driver=false
+appPlugin: i2c-driver-stub=false
+appPlugin: icmp-cli=true
+appPlugin: icmp-debug=true
+appPlugin: identify-server=false
+appPlugin: idle-sleep=false
+appPlugin: illuminance-measurement-server=false
+appPlugin: illuminance-si1141-stub=false
+appPlugin: infrared-led=false
+appPlugin: key-matrix=false
+appPlugin: led=false
+appPlugin: led-blink=false
+appPlugin: led-dim-pwm=false
+appPlugin: led-rgb-pwm=false
+appPlugin: led-stub=true
+appPlugin: led-temp-pwm=false
+appPlugin: level-control-server=false
+appPlugin: linked-list=false
+appPlugin: log-cli=false
+appPlugin: main=true
+appPlugin: mbedtls-library=false
+appPlugin: mfglib-library=true
+appPlugin: mfglib-stub-library=false
+appPlugin: microphone-codec-msadpcm=false
+appPlugin: microphone-imaadpcm=false
+appPlugin: mpsi=false
+appPlugin: mpsi-ipc=false
+appPlugin: mpsi-storage=false
+appPlugin: ncp-library=false
+appPlugin: ncp-spi-link=false
+appPlugin: ncp-uart-link=false
+appPlugin: network-management-cli=true
+appPlugin: occupancy-pyd1698=false
+appPlugin: occupancy-pyd1698-stub=false
+appPlugin: occupancy-sensing-server=false
+appPlugin: on-off-server=false
+appPlugin: paho.mqtt.c=false
+appPlugin: poll-control-client=false
+appPlugin: poll-control-server=false
+appPlugin: polling=false
+appPlugin: power-configuration-server=false
+appPlugin: psstore=false
+appPlugin: rail-library=false
+appPlugin: relative-humidity-measurement-server=false
+appPlugin: sb1-gesture-sensor=false
+appPlugin: scan-debug=true
+appPlugin: serial=true
+appPlugin: sim-eeprom1=false
+appPlugin: sim-eeprom2=false
+appPlugin: sim-eeprom2-1to2-upgrade=false
+appPlugin: sim-eeprom2-1to2-upgrade-stub=false
+appPlugin: slaac-client=true
+appPlugin: slot-manager=false
+appPlugin: stm32f103ret-library=false
+appPlugin: tamper-switch=false
+appPlugin: temperature-measurement-server=false
+appPlugin: temperature-si7053-stub=false
+appPlugin: tftp-bootload-target=false
+appPlugin: thread-stack=false
+appPlugin: thread-test-harness-cli=false
+appPlugin: transport-mqtt=false
+appPlugin: udp-cli=true
+appPlugin: udp-debug=true
+appPlugin: unix-library=true
+appPlugin: unix-netif-config=false
+appPlugin: version-debug=true
+appPlugin: zcl-core=false
+
+# Setup configurations
+{setupId:additionalFiles
+PATH(ISC_RELATIVE):border-router-implementation.c
+}
+{setupId:boardHeader
+}
+{setupId:bookkeeping
+}
+{setupId:bootloader
+}
+{setupId:callbackConfiguration
+emberAfNetworkStatusCallback:false
+emberAfInitCallback:false
+emberAfMainCallback:false
+emberCommissionNetworkReturn:false
+emberConfigureGatewayReturn:false
+emberGetGlobalAddressReturn:false
+emberResumeNetworkReturn:false
+emberSetSecurityParametersReturn:false
+emberFormNetworkReturn:false
+emberJoinNetworkReturn:false
+emberAddressConfigurationChangeHandler:false
+emberCommissionerStatusHandler:false
+emberSendSteeringDataReturn:false
+emberResetNetworkStateReturn:false
+}
+{setupId:coapDispatch
+POST, device/announce, deviceAnnounceHandler
+POST, device/multicaston, deviceMulticastOnHandler
+POST, device/multicastoff, deviceMulticastOffHandler
+POST, server/discover, serverDiscoverHandler
+POST, device/multicastdim, deviceMulticastDimHandler
+POST, borderrouter/reset, netResetHandler
+}
+{setupId:commandLineConfiguration
+on
+discover,discoverCommand,,unlocked
+multicast-on,multicastonCommand,,unlocked
+multicast-off,multicastoffCommand,,unlocked
+}
+{setupId:debugConfiguration
+on
+area name off
+appSerial=1
+}
+{setupId:eventConfiguration
+stateEventControl,stateEventHandler
+}
+{setupId:genConfig
+}
+{setupId:halOptions
+}
+{setupId:hwConfig
+active=false
+}
+{setupId:information
+\{key:description
+Border Router Sample Applications
+
+The border router and sensor/actuator node sample applications demonstrate basic Thread network functionality for a wireless sensor/actuator network and how a border router can route traffic between the mesh and external devices.  This example used join-out-of-band by default, but can be configured to commission a device to a network using the official Thread Commissioning app.  Also, in this example, a Node.js/React server runs on the border router itself.  In addition to the ability to route traffic through the border router to the sensor/actuator nodes, the server application facilitates a more direct connection to the sensor/actuator nodes.  The sensor/actuator nodes communicate using the Constrained Application Protocol (CoAP) at the application layer, with UDP serving as the transport layer.  CoAP and UDP are provided by the Silicon Labs Thread stack.
+
+At startup, the border router will automatically start network operations.  If the border router is starting for the first time, it will read the configuration file located at /etc/siliconlabs/border-router.conf to determine its default network parameters, such as networkId and the IPv6 prefixes for its end nodes.  If no configuration file exists, the networkId will default to "border-router" and the IPv6 prefixes will default to values within the 'documentation-only' 2001:db8::/32 subnet.  If the border-router had already formed a network previously, it will simply resume network operations using the parameters stored in non-volatile memory in the stack.  After forming or resuming, border-router will await an external commissioner joining the network.  The external commissioner will be responsible for allowing other devices to authenticate and be added onto the network.
+
+To reinitialize network settings the NCP may be erased and reprogrammed, or the border-router can be reset via the web interface.
+
+The Node.js server can request that the border router discover devices.  Then discovery requests, sent as CoAP POST requests to the "borderrouter/discover" URI, inform sensor/actuator nodes in the network about the presence of the external Node.js server.  When a sensor/actuator node without a Node.js server subscription receives the discovery request, it will respond with its globally unique address.  The Node.js server can use this global address to communicate directly with the sensor/actuator node.  The Node.js server starts subscribing to the devices data by sending a "subscriber/subscribe" URI as a CoAP POST.  The sensor/actuator node will begin sending temperature data to the Node.js server as CoAP POST requests to the "device/temperature" URI.  Additionally the sensor/actuator node can send a button 0 press to the "device/button" URI.  The server can also issue CoAP POST requests to the sensor actuator node.  The LED can be turned on with the "device/led" URI and the buzzer can be sounded with the "device/buzzer" URI.  All CoAP POST requests are unicast directly between the Node.js server and the sensor/actuator node and passively route through the border router.
+
+The border router sample application can communicate with the NCP using either SPI or UART.  With SPI, the spi-server and ip-driver-app utility programs are used to interact with the NCP.  With UART, only the ip-driver-app utility program is used.  spi-server will run itself in the background.  ip-driver-app runs in the foreground by default, but it can be run in the background using shell job control features.
+
+In the examples below, THREAD_HOME refers to the location where the Thread stack is installed and PROJECT_HOME refers to the location where your project was generated by AppBuilder.
+
+The following commands will compile and run the spi-server and ip-driver-app utilities and the sample application, in order to connect to an NCP using SPI:
+
+$ cd THREAD_HOME/tool/spi-server
+$ make
+$ sudo ./spi-server.sh 4951 spidev0.0 22 23 24 0xFF 8 --nolog
+$ cd ../..
+$ make -f app/ip-ncp/ip-driver-app.mak
+$ sudo ./build/ip-driver-app/ip-driver-app -s -u 4951 -t tun0 -m 4901 -c 8888 &
+$ cd PROJECT_HOME
+$ make
+$ sudo ./build/exe/border-router -m 4901
+
+The --nolog flag can be omitted if debug output is required.
+
+The following commands will compile and run the ip-driver-app utility and the sample application, in order to connect to an NCP using UART:
+
+$ cd THREAD_HOME
+$ make -f app/ip-ncp/ip-driver-app.mak
+$ sudo build/ip-driver-app/ip-driver-app -u /dev/ttyUSB0 -t tun0 -m 4901 -c 8888 &
+$ cd PROJECT_HOME
+$ make
+$ sudo ./build/exe/border-router -m 4901
+
+This example assumes the NCP is connected by USB and identified as /dev/ttyUSB0.  USB NCPs may also appear as /dev/ttyUSBx or /dev/ttyACMx, where x is some integer; other types of UART connections will appear differently.
+
+The thread-comm-app will enable external commissioners to add joiners to the network through port 19779.  In order to compile and run the thread-comm-app:
+
+$ cd THREAD_HOME
+$ make -f app/thread-commissioning/thread-comm-app.mak
+$ sudo ./build/thread-comm-app/thread-comm-app --port 19779 --mgmt_port 8888
+
+The border router reference design will work with a server running locally. There are extra steps for routing for an external server.  Before starting the border router application you must setup a specific route and global IPv6 address that the external Node.js server can connect to.  If your external server connects to the border-router via the hostapd/wlan0 interface, and is configured to automatically obtain an ipv6 address, it will automatically be assigned an address from the 'HOST_SUBNET' assigned to the border-router in /etc/siliconlabs/border-router.conf.  Otherwise, to manually assign an address input the following command:
+
+$ sudo /sbin/ip -6 addr add 2001:db8:8569:b2b1/64 dev eth0
+
+Forwarding must also be enabled, and can be enabled with the following command:
+
+$ sudo sysctl -w net.ipv6.conf.all.forwarding=1
+
+The external server then must make sure that devices can route MESH_SUBNET (default: 2001:db8:0385:9318::/64) addresses over over the HOST_SUBNET address the server was assigned. In servers designed to automatically obtain an ipv6 address, routing will be handled by the Linux networking stack. Otherwise, routing must be manually enabled. In Linux use the following commands to manually configure routing:
+
+$ sudo /sbin/ip -6 addr add 2001:db8:8569:b2b1::2/64 dev wlan0
+$ sudo /sbin/ip -6 route add 2001:0db8:0385:9318::/64 via 2001:db8:8569:b2b1::1
+
+Both MESH_SUBNET and HOST_SUBNET can be configured by editing their appropriate entry in /etc/siliconlabs/border-router.conf.  If no border-router.conf file is found, the border-router will use its precompiled defaults.
+
+All application code is contained in the border-router-implementation.c file within the application directory.
+\}
+}
+{setupId:macros
+}
+{setupId:serial
+em317=0,false,*,*,*,*,*
+em341=0,false,*,*,*,*,*
+em342=0,false,*,*,*,*,*
+em346=0,false,*,*,*,*,*
+em351=0,false,*,*,*,*,*
+em355=0,false,*,*,*,*,*
+em3555=0,false,*,*,*,*,*
+em357=0,false,*,*,*,*,*
+em357p2p=0,false,*,*,*,*,*
+em3581=0,false,*,*,*,*,*
+em3582=0,false,*,*,*,*,*
+em3585=0,false,*,*,*,*,*
+em3586=0,false,*,*,*,*,*
+em3587=0,false,*,*,*,*,*
+em3588=0,false,*,*,*,*,*
+em3591=0,false,*,*,*,*,*
+em3592=0,false,*,*,*,*,*
+em3595=0,false,*,*,*,*,*
+em3596=0,false,*,*,*,*,*
+em3597=0,false,*,*,*,*,*
+em3598=0,false,*,*,*,*,*
+sky66107=0,false,*,*,*,*,*
+simulation=0,false,*,*,*,*,*
+efr32=0,false,*,*,*,*,*
+}
+{setupId:template
+}
+{setupId:token
+}
+{setupId:zclip
+configuredNetwork:type:ZIGBEE_PRO, name:Primary
+beginEndpointType:Primary
+device:HA-onoff
+endEndpointType
+configuredEndpoint:ep:1,pi: -1,di:-1,dv:0,ept:Primary,nwk:Primary
+}
+
+# Plugin options
+pluginOption(unix): EMBER_APPLICATION_HAS_SECURITY_TO_HOST,true

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentItems
+xmlns="http://www.silabs.com/ss/ContentItem.ecore"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.silabs.com/ss/ContentItem.ecore file:/C:/Users/CAOWENS/Documents/ssv4/contentItems.xsd">
+  <contentItemData
+    priority="9"
+    category="Getting Started"
+    itemURI="file:index.html"
+    label="Documentation Index"
+    description="Provides an overview and hyperlinks to all packaged documentation."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN961_CustomNodesEFR32.pdf"
+    label="AN961: Bringing Up Custom Devices for the Mighty Gecko and Flex Gecko Families"
+    description="SL Thread: Describes how to initialize a piece of custom hardware (a 'device') based on the Mighty Gecko and Flex Gecko families so that it  interfaces correctly with a network stack. The same procedures can be used to restore devices whose settings have been corrupted or erased."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:tftp-bootloader-client-app-readme.txt"
+    label="tftp-bootloader-client-app Reference"
+    description="SL Thread: Describes using the tftp-bootloader-client-app bootloading application. "
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="Fundamentals"
+    itemURI="file:UG103-04-AppDevFundamentals-HAL.pdf"
+    label="UG103-04: Fundamentals - HAL"
+    description="SL Thread: Silicon Labs HAL (Hardware Abstraction Layer) is program code between a  system's hardware and its software that provides a consistent interface  for applications that can run on several different hardware platforms. The HAL is designed for developers using EmberZNet PRO, EmberZNet RF4CE, and Silicon Labs Thread on the  Wireless Gecko (EFR32) portfolio and the EM3x-Based MCU family of products. "
+  ></contentItemData>
+  <contentItemData
+    priority="1"
+    category="API References"
+    itemURI="file:Thread-Doxygen/index.html"
+    label="Silicon Labs Thread API Reference Guide"
+    description="SL Thread: Contains a comprehensive  list of APIs used to interface to the Thread network. These APIs concern network management,  device and stack management (including management of stack tables, event scheduling, message  buffers and security), messaging, fragmentation, serial communication, token access, peripheral  access, bootload utilities and others."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN703_Simulated_EEPROM.pdf"
+    label="AN703: Using the Simulated EEPROM for the EM35x and Mighty Gecko Family SoC Platforms"
+    description="SL Thread: Describes how to use the simulated EEPROM in Silicon Labs' EM35x and Mighty Gecko (EFR32MG) platforms, gives an  overview of the internal design, and discusses design considerations. You should already be familiar with  the token system in the HAL. For more information on HAL and the token system, see the online HAL API documentation."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Release Notes"
+    itemURI="file:../app/thread/doc/thread-framework-readme.txt"
+    label="Silicon Labs Thread Framework README"
+    description="SL Thread: Describes the Silicon Labs Thread framework plugins and libraries, roughly divided into three categories: HAL, stack, and application.  "
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN1031-Thread-Network-Scalability.pdf"
+    label="AN1031: Thread Large Network Scalability"
+    description="SL Thread: Details methods and results for Thread large network scalability and performance testing. This testing focuses on the scalability of these  networks while carrying out unicast and multicast traffic typical of a large commercial installation. The methodology for performing the  benchmarking tests is defined to allow others to run the same tests. These results are intended to provide guidance on design practices  and principles as well as expected field performance results."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:an1017-coexistence-with-WiFi.pdf"
+    label="AN1017: ZigBee and Thread Coexistence with WiFi"
+    description="SL Thread: Describes the impact of Wi-Fi on ZigBee and Thread, and methods to improve coexistence. First, methods to improve coexistence without direct  interaction between ZigBee/Thread and Wi-Fi radios are described (for both EM35x/EM358x and EFR32MG). Second, Silicon Labs's Packet Traffic  Arbitration (PTA) support to coordinate 2.5 GHz RF traffic for co-located ZigBee/Thread and Wi-Fi radios is described (for the EFR32MG only)."
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="Fundamentals"
+    itemURI="file:UG103-07-AppDevFundamentals-Tokens.pdf"
+    label="UG103-07: Fundamentals - Tokens"
+    description="SL Thread: Describes tokens and shows how to use them in EmberZNet PRO, EmberZNet RF4CE, and Silicon Labs Thread  applications. It also discusses bindings, the ZigBee PRO application-defined associations between two  devices on a network."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:ug115-ashv3-protocol-reference.pdf"
+    label="UG115: ASHv3 Protocol Reference"
+    description="Describes the protocol used by the UART-based ASHv3 to reliably carry commands and responses between a host processor  and a network co-processor."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:ug266-gecko-bootloader-user-guide.pdf"
+    label="UG266: Silicon Labs Gecko Bootloader User's Guide"
+    description="SL Thread: Describes the high-level implementation of the Silicon Labs Gecko Bootloader for EFR32 SoCs and NCPs,  and provides information on how to get started using the Gecko Bootloader with Silicon Labs wireless protocol stacks. "
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="Fundamentals"
+    itemURI="file:UG103-06-AppDevFundamentals-Bootloading.pdf"
+    label="UG103-06: Fundamentals - Bootloading"
+    description="SL Thread: Introduces bootloading for Silicon Labs networking devices. Discusses the Gecko Bootloader as well  as legacy Ember and Bluetooth bootloaders, and describes the file formats used by each. "
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN760_Using_Standalone_Bootloader.pdf"
+    label="AN760: Using the Ember Standalone Bootloader"
+    description="SL Thread: For EFR32xG12 platforms and newer, see UG266: Silicon Labs Gecko Bootloader User Guide.  This describes using the legacy Ember Standalone Bootloader for EM3x and early EFR32 platforms. The Ember Standalone bootloader is a simple, dedicated program to facilitate input of new application/stack firmware via Xmodem upload  to a serial interface (SPI or UART) or via a proprietary, IEEE 802.15.4-based, single-hop MAC layer RF  protocol."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:an710-custom-nodes-em35x.pdf"
+    label="AN710: Bringing Up Custom Devices for the EM35x SoC or NCP Platform"
+    description="SL Thread: Contains a list of Customer Information Block (CIB) tokens  and explains how to program/use the CIB, a special non-volatile area of Flash that contains information such as custom EUI64,  install code, certificates and other data that can only be programmed through an external interface such as JTAG serial wire. "
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Release Notes"
+    itemURI="file:../app/thread/doc/thread-zclip-readme.txt"
+    label="Silicon Labs Thread Framework ZCL over IP README"
+    description="SL Thread: Describes the set of lugins that provide ZCL over IP functionality "
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:UG107-EM35xSoCUtilitiesGuide.pdf"
+    label="UG107: ISA3 Utilities Guide"
+    description="SL Thread: Describes how to use the   standalone ISA3 utilities supplied with EmberZNet PRO and Silicon Labs Thread software. It also gives  a brief overview of the various file types that may be used."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:UG162-SimplicityCommanderReferenceGuide.pdf"
+    label="UG162: Simplicity Commander Reference Guide"
+    description="SL Thread: Describes how and when to use Simplicity Commander's Command-Line Interface.   Only EFR32 is currently supported. EM3xx is not supported at this time."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:ThreadTestAppCliDocumentation.txt"
+    label="Thread Test App CLI Reference Guide"
+    description="SL Thread: Describes the Command-Line Interface (CLI) available in the thread-test-app,  a compilable application used for simple CLI-based Thread testing, and testing  with the Thread Group Test Harness."
+  ></contentItemData>
+  <contentItemData
+    priority="1"
+    category="Fundamentals"
+    itemURI="file:UG103-11-AppDevFundamentals-Thread.pdf"
+    label="UG103-11: Fundamentals - Thread"
+    description="SL Thread: Includes a brief background on the emergence of Thread, provides a technology overview,  and describes some key features of Thread to consider when implementing a Thread solution."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:UG116-BorderRouterUG.pdf"
+    label="UG116: Developing Custom Border Router Applications"
+    description="SL Thread: Provides information on developing custom variants of all or part of the software required for a border router device."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN715_UsingtheEM35xADC.pdf"
+    label="AN715: Using the EM35x ADC"
+    description="SL Thread: Describes how to use the EM35x Analog to Digital Converter (ADC), a first-order sigma-delta converter, gives an overview  of the internal design, discusses design considerations, and provides example code of fundamental usage."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN912-SPI-Host-Configuration.pdf"
+    label="AN912: SPI Host Interfacing Guide for Thread"
+    description="SL Thread: Describes how to set up and test communication between a host and Network Co-Processor (NCP) using the SPI (Serial Peripheral Interface).  It assumes that you have a Raspberry Pi, jumper wires (for SPI communication), and a development board. It applies to Silicon Labs Thread stack version  1.0.4 or later."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:UG104-TestDebugEmberApps.pdf"
+    label="UG104: Testing and Debugging Applications for the Silicon Labs EM35x and Mighty Gecko (EFR32MG) Platforms"
+    description="SL Thread: Describes strategies for testing and debugging  applications, including:  hardware and application considerations, initial development testing, and lab  testing. For additional information about later stages of programming and testing see application  notes AN700, Manufacturing Test Guidelines, and AN718, Manufacturing Test Overview."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:UG110-EM35xDevKitUserGuide.pdf"
+    label="UG110: EM35x Development Kit User Guide"
+    description="SL Thread: Describes the EM35x Development  Kit and explains how to set up its hardware and use the Debug Adapter (ISA3). Descriptions of some of the  software tools available are provided, along with examples of their use."
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="Quick Start Guides"
+    itemURI="file:QSG102_ThreadBorderRouterKit.pdf"
+    label="QSG102: Silicon Labs Thread Border Router Add-On Kit Quick-Start Guide"
+    description="SL Thread: Describes the Silicon Labs Thread Border Router Kit, how to set it up with an  existing EM35x Development Kit, and how to demonstrate an example application."
+  ></contentItemData>
+  <contentItemData
+    priority="1"
+    category="Quick Start Guides"
+    itemURI="file:QSG113_EFR32_Thread.pdf"
+    label="QSG113: Getting Started with Silicon Labs Thread"
+    description="SL Thread: Provides basic information on installing your development environment, and  configuring, building, and installing applications for the Mighty Gecko family  and EM35x using the Silicon Labs Thread stack."
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="Fundamentals"
+    itemURI="file:UG103-03-AppDevFundamentals-DesignChoices.pdf"
+    label="UG103-03: Fundamentals - Design Choices"
+    description="SL Thread: Discusses the major decisions that must be made about which wireless protocol you should use,  as well as additional decisions to be made if you are designing a ZigBee solution."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN1019-NodeTest.pdf"
+    label="AN1019: Using the NodeTest Application"
+    description="SL Thread: Describes how to use NodeTest, a pre-built application supplied by Silicon Labs for the purpose of performing RF evaluation,  functional testing, and hardware validation. It contains RF test functions pertinent to IEEE 802.15.4-based radio configurations such as those used  by the Silicon Labs EmberZNet PRO and Silicon Labs Thread stacks on platforms such as the EM35x, Mighty Gecko, or Flex Gecko families."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN717_ProgrammingOptions_EM35x.pdf"
+    label="AN717: Programming Options - For the EM35x Platform"
+    description="SL Thread: Describes the various programming options available to EM35x series customers - the Debug Adapter (ISA3) for the  developer environment and the prototype and low-volume production environment, and gang programmers, in-system programmers (ISPs), and  in-circuit test (ICT) programming options for the high-volume production environment."
+  ></contentItemData>
+  <contentItemData
+    priority="1"
+    category="Release Notes"
+    itemURI="file:thread-release-notes.pdf"
+    label="Silicon Labs Thread Release Notes"
+    description="SL Thread: Lists compatibility requirements and sources for all software components  in the development environment. Discusses the latest changes to the Silicon  Labs Thread stack (and associated utilities) including added/deleted/deprecated  features/API, and lists bugs that have been fixed  since the last release and any pending ones."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN844_ASHv3_Host_UART_Interface_Guide.pdf"
+    label="AN844: Guide to Host/Network Co-Processor Communications Using Silicon Labs Thread and Connect"
+    description="SL Thread: Describes how to set up and test UART communication between a host and Network Co-Processor (NCP) using ASHv3-UART. It assumes  that you have a Raspberry Pi, USB cable (for UART communication), and a development board."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="User's Guides"
+    itemURI="file:ThreadTestAppGrlCliDocumentation.txt"
+    label="Thread Test Application GRL Test Harness CLI Reference Guide"
+    description="SL Thread: Describes the Command-Line Interface (CLI) available in the Thread Test Application, an application used for testing in the GRL Thread Test Harness. All of the commands described in this document are found in the Thread Test Harness CLI plugin."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:an740-using-em358-usb.pdf"
+    label="AN740: Using the Ember EM358x/EM359x USB"
+    description="SL Thread: Provides key information for using the Ember EM358x USB. The goal of the EM358x USB is to only act as  COM port replacement  for UART-style functionality."
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="Fundamentals"
+    itemURI="file:UG103-01-AppDevFundamentals-WirelessNetwork.pdf"
+    label="UG103-01: Fundamentals - Wireless Networking"
+    description="SL Thread: Introduces some fundamental concepts of wireless networking. These concepts are referred to in other  Fundamentals documents. If you are new to wireless networking, read this document first."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN700_MfgTestGuidelines.pdf"
+    label="AN700: Manufacturing Test Guidelines"
+    description="SL Thread: Details the different options for integrating RF testing and characterization into your standard test flows."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN1010-customized-NCP.pdf"
+    label="AN1010: Building a Customized NCP Application"
+    description="SL Thread: Provides instructions for configuring various aspects of an NCP application image using the Application Builder tool within  Simplicity Studio."
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN709_ACR_measurement.pdf"
+    label="AN709: Adjacent Channel Rejection Measurements - For 802.15.4 radios"
+    description="SL Thread: Presents the method Silicon Labs uses to measure Adjacent channel rejection (ACR) on its IEEE 802.15.4-2003 compliant ICs, and compares it to other methods. ACR is a measure of how well a reciever performs on its frequency channel  when there is an interfering system in the vicinity operating on a nearby channel. "
+  ></contentItemData>
+  <contentItemData
+    priority="2"
+    category="Fundamentals"
+    itemURI="file:UG103-08-AppDevFundamentals-Tools.pdf"
+    label="UG103-08: Fundamentals - Tools"
+    description="SL Thread: Provides an overview of the toolchain used to develop, build, and deploy EmberZNet and Silicon Labs  Thread applications, and discusses some addition tools and utilities.  "
+  ></contentItemData>
+  <contentItemData
+    priority="9"
+    category="Application Notes"
+    itemURI="file:AN718_MfgTestOverview.pdf"
+    label="AN718: Manufacturing Test Overview"
+    description="SL Thread: Provides a high-level description of the different options for integrating RF testing and characterization into your standard  test flows. It is intended for customers who are moving from the early prototype development stage to the manufacturing production environment  and need assistance with manufacturing test. "
+  ></contentItemData>
+</contentItems>

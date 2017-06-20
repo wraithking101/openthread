@@ -1,0 +1,38 @@
+var micro_common_8h =
+[
+    [ "MICRO_DISABLE_WATCH_DOG_KEY", "micro-common_8h.htm#gabb42f7171eba6959a54c6e6d9aeca64e", null ],
+    [ "GPIO_MASK_SIZE", "micro-common_8h.htm#ga899a94786d07b7672a624638ffecc4ff", null ],
+    [ "GPIO_MASK", "micro-common_8h.htm#ga405d1e0eeb97afad3e0fe118463c47b2", null ],
+    [ "WAKE_GPIO_MASK", "micro-common_8h.htm#ga38c418b48f9947c0bb3377dabe91adec", null ],
+    [ "WAKE_GPIO_SIZE", "micro-common_8h.htm#gae3527a6096d4dd996626ed7c904d9edd", null ],
+    [ "WAKE_MASK_INVALID", "micro-common_8h.htm#ga95539db70ccc1bde171cfe604ed75727", null ],
+    [ "WAKE_EVENT_SIZE", "micro-common_8h.htm#ga752913e161510fa16ceae603bb0b023e", null ],
+    [ "DEBUG_TOGGLE", "micro-common_8h.htm#ga04551612acfa583afae9457e97717852", null ],
+    [ "WakeEvents", "micro-common_8h.htm#ga472551fc0b4f365987be0eaefad4e077", null ],
+    [ "WakeMask", "micro-common_8h.htm#gaedf4d62b049a84e8a685068fe757dcb3", null ],
+    [ "SleepModes", "micro-common_8h.htm#gace58749df14c14b64252eb55f40d2c32", [
+      [ "SLEEPMODE_RUNNING", "micro-common_8h.htm#ggace58749df14c14b64252eb55f40d2c32a4b1e70cf7dd0396d75a5ef3bc357694a", null ],
+      [ "SLEEPMODE_IDLE", "micro-common_8h.htm#ggace58749df14c14b64252eb55f40d2c32a8dec81d54908044ef56016aee3b1b506", null ],
+      [ "SLEEPMODE_WAKETIMER", "micro-common_8h.htm#ggace58749df14c14b64252eb55f40d2c32a93af1c45a33be62df00d0ab82ef04128", null ],
+      [ "SLEEPMODE_MAINTAINTIMER", "micro-common_8h.htm#ggace58749df14c14b64252eb55f40d2c32a4c95cce8a2fe32d302ce3a42a74c58d1", null ],
+      [ "SLEEPMODE_NOTIMER", "micro-common_8h.htm#ggace58749df14c14b64252eb55f40d2c32a559adb5abaebc7504743f8684ab16f28", null ],
+      [ "SLEEPMODE_HIBERNATE", "micro-common_8h.htm#ggace58749df14c14b64252eb55f40d2c32a08ae9a38dcd6456710f3b4a842b7a4bf", null ],
+      [ "SLEEPMODE_RESERVED", "micro-common_8h.htm#ggace58749df14c14b64252eb55f40d2c32a8d06b6cc298a4a34eaca616b86f800d5", null ],
+      [ "SLEEPMODE_POWERDOWN", "micro-common_8h.htm#ggace58749df14c14b64252eb55f40d2c32a0f74b29aa0a12fbc2c31db42392101d7", null ],
+      [ "SLEEPMODE_POWERSAVE", "micro-common_8h.htm#ggace58749df14c14b64252eb55f40d2c32a34e3924778494e4fd21702fb4fbed0b2", null ]
+    ] ],
+    [ "halInit", "micro-common_8h.htm#gafd89c1650df524d95aef39b8bc38170d", null ],
+    [ "halReboot", "micro-common_8h.htm#ga3550a689dc90ddd9d7d973bb154dd909", null ],
+    [ "halPowerUp", "micro-common_8h.htm#ga467bf8ac5d5964ca282f332f4e394654", null ],
+    [ "halPowerDown", "micro-common_8h.htm#gae13140ae48ea28772b67717f0d28f5e9", null ],
+    [ "halResume", "micro-common_8h.htm#ga3828884cc072db5a38d32e46303bd9a9", null ],
+    [ "halSuspend", "micro-common_8h.htm#ga20bc9158aea3cd3f8ecae04f6c71205b", null ],
+    [ "halInternalEnableWatchDog", "micro-common_8h.htm#ga7ea499662dd11955f9f3cc340e2455b8", null ],
+    [ "halInternalDisableWatchDog", "micro-common_8h.htm#ga21b247f7a0bd7a5805907850e570f042", null ],
+    [ "halInternalWatchDogEnabled", "micro-common_8h.htm#ga3d91e268c1e407e325b0d6cfdc1e51b1", null ],
+    [ "halSleep", "micro-common_8h.htm#ga6d05736655f1a012dc969d1d912e835b", null ],
+    [ "halCommonDelayMicroseconds", "micro-common_8h.htm#gab9786c70c0c1f05fae86b1a399d8dbd6", null ],
+    [ "halCommonDisableVreg1v8", "micro-common_8h.htm#ga3bc36ac9b487454e12f1bb4843ca5ee1", null ],
+    [ "halCommonEnableVreg1v8", "micro-common_8h.htm#ga551912b29368ac72a1b6a83d13268a12", null ],
+    [ "halCommonVreg1v8EnableCount", "micro-common_8h.htm#gabee2e7c7d11e5c6790a5841c91a80a9c", null ]
+];

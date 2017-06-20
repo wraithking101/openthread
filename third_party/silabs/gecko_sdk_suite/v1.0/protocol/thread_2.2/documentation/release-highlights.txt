@@ -1,0 +1,9 @@
+
+What's new in Thread 2.2.1.0:
+  * Critical bug fixes for Thread
+  
+What's new in Thread 2.2.0.0:
+  * Improved CoAP interface
+  * Improvements and bug fixes for Thread 1.1 interoperability 
+  * Support for EFR32MG12
+  * Support for Gecko Bootloader

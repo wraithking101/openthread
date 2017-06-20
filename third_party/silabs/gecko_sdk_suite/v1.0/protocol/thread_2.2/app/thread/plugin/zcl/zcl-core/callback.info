@@ -1,0 +1,65 @@
+#include PLATFORM_HEADER
+#include CONFIGURATION_HEADER
+#include EMBER_AF_API_ZCL_CORE
+
+void emberZclGetPublicKeyCallback(const uint8_t **publicKey,
+                                  uint16_t *publicKeySize)
+{
+}
+
+bool emberZclPreAttributeChangeCallback(EmberZclEndpointId_t endpointId,
+                                        const EmberZclClusterSpec_t *clusterSpec,
+                                        EmberZclAttributeId_t attributeId,
+                                        const void *buffer,
+                                        size_t bufferLength)
+{
+  return true;
+}
+
+void emberZclPostAttributeChangeCallback(EmberZclEndpointId_t endpointId,
+                                         const EmberZclClusterSpec_t *clusterSpec,
+                                         EmberZclAttributeId_t attributeId,
+                                         const void *buffer,
+                                         size_t bufferLength)
+{
+}
+
+EmberZclStatus_t emberZclReadExternalAttributeCallback(EmberZclEndpointId_t endpointId,
+                                                       const EmberZclClusterSpec_t *clusterSpec,
+                                                       EmberZclAttributeId_t attributeId,
+                                                       void *buffer,
+                                                       size_t bufferLength)
+{
+  return EMBER_ZCL_STATUS_UNSUPPORTED_ATTRIBUTE;
+}
+
+EmberZclStatus_t emberZclWriteExternalAttributeCallback(EmberZclEndpointId_t endpointId,
+                                                        const EmberZclClusterSpec_t *clusterSpec,
+                                                        EmberZclAttributeId_t attributeId,
+                                                        const void *buffer,
+                                                        size_t bufferLength)
+{
+  return EMBER_ZCL_STATUS_UNSUPPORTED_ATTRIBUTE;
+}
+
+void emberZclGetDefaultReportingConfigurationCallback(EmberZclEndpointId_t endpointId,
+                                                      const EmberZclClusterSpec_t *clusterSpec,
+                                                      EmberZclReportingConfiguration_t *configuration)
+{
+}
+
+void emberZclGetDefaultReportableChangeCallback(EmberZclEndpointId_t endpointId,
+                                                const EmberZclClusterSpec_t *clusterSpec,
+                                                EmberZclAttributeId_t attributeId,
+                                                void *buffer,
+                                                size_t bufferLength)
+{
+}
+
+void emberZclNotificationCallback(const EmberZclNotificationContext_t *context,
+                                  const EmberZclClusterSpec_t *clusterSpec,
+                                  EmberZclAttributeId_t attributeId,
+                                  const void *buffer,
+                                  size_t bufferLength)
+{
+}

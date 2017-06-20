@@ -1,0 +1,3 @@
+/home/iot/openthread/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/iot/openthread/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/iot/openthread/cmake-build-debug/CMakeFiles/openthread.dir

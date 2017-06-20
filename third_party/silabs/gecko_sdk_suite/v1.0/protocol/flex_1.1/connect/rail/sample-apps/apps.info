@@ -1,0 +1,141 @@
+bidirectional-efr32 {
+  name=RAIL: Bidirectional Sample Application for EFR32
+  dir=bidirectional/
+  demo.1.bin=../apps-bin/bidirectional.hex
+  demo.1.arch=efr32~family[F]~performance[P]~radio[132]~flash[256k]~temp[G]~package[M]~pins[48]+BRD4252A
+  isc=bidirectional/bidirectional.isc
+  architecture=efr32,simulation
+  Flex: This is a Silicon Labs Simple Transmit and Ack application demo.
+  It is an example application which demonstrates the simplest transmit and ack
+  sample application based on RAIL with the following PHY:
+    frequency: 2.4GHz 
+    deviation: 500k 
+    modulation: 2gfsk 
+    bitrate: 1 Mbps
+}
+
+connected-motion {
+  name=RAIL: Connected Motion Sample Application for EFR32 thunderboard
+  dir=connected_motion/
+  isc=connected_motion/connected_motion.isc
+  architecture=BRD4160A
+  Flex: This example demonstrates how one can use a very simple radio protocol
+  to communicate between nodes where lost packets is of no concern. In
+  this demonstration, each node has a different color, in which it will
+  light up when it detects that it is in motion. The active node
+  transmits its state to nearby nodes, which also light up in the same
+  color. When all nodes are stationary, a  master  node coordinates a
+  green light fading from board to board.
+
+  sample application based on RAIL with the following PHY:
+    frequency: 2.4GHz 
+    deviation: 500k 
+    modulation: 2gfsk 
+    bitrate: 1 Mbps
+}
+
+dutycycle-efr32 {
+  name=RAIL: Duty Cycle Sample Application for EFR32
+  dir=dutycycle/
+  demo.1.bin=../apps-bin/dutycycle.hex
+  demo.1.arch=efr32~family[F]~performance[P]~radio[132]~flash[256k]~temp[G]~package[M]~pins[48]+BRD4252A
+  isc=dutycycle/dutycycle.isc
+  architecture=efr32,simulation
+  Flex: This is a Silicon Labs Duty Cycle Sample Application, which has 3 modes of operation: Duty Cycle, Master, Slave.
+  It demonstrates low power applications using the EFR32 with the following PHY:
+    frequency: 2.4GHz
+    deviation: 500k
+    modulation: 2gfsk
+    bitrate: 38.4 kbps
+}
+
+emode-efr32 {
+  name=RAIL: Energy Mode Sample Application for EFR32
+  dir=emode/
+  demo.1.bin=../apps-bin/emode.hex
+  demo.1.arch=efr32~family[F]~performance[P]~radio[132]~flash[256k]~temp[G]~package[M]~pins[48]+BRD4252A
+  isc=emode/emode.isc
+  architecture=efr32,simulation
+  Flex: This is a Silicon Labs Energy Mode Sample Application that demonstrates
+  the low power modes of the EFR32 with the following PHY: 
+    frequency: 2.4GHz 
+    deviation: 500k 
+    modulation: 2gfsk 
+    bitrate: 1 Mbps
+}
+
+railtest-efr32 {
+  name=RAIL: RAILTEST Sample Application for EFR32
+  dir=../../../../../platform/radio/rail_lib/apps/railtest
+  demo.1.bin=../apps-bin/railtest.hex
+  demo.1.arch=efr32~family[F]~performance[P]~radio[132]~flash[256k]~temp[G]~package[M]~pins[48]+BRD4252A
+  isc=railtest/railtest_efr32.isc
+  architecture=efr32,simulation
+  Flex: This is a Silicon Labs RAILTEST application demo.
+  It is an example application which demonstrates the features of RAIL through
+  a command line interface with the following PHY:
+    frequency: 2.4GHz 
+    deviation: 500k 
+    modulation: 2gfsk 
+    bitrate: 1 Mbps
+}
+
+rangetest-efr32 {
+  name=RAIL: Range Test Sample Application for EFR32
+  dir=rangetest/
+  isc=rangetest/rangetest.isc
+  architecture=efr32,simulation
+  Flex: This is a customizable Range Test Sample Application that demonstrates
+  over the air range of the EFR32. The default PHY configuration for this sample is:
+    frequency: 2.4GHz
+    deviation, modulation and bitrate consistent with 802.15.4 specification
+  The user has the ability to change this phy configuration to whatever settings they would like.
+}
+
+rangetest-efr32-2gfsk {
+  name=RAIL: Range Test Sample Application for EFR32 - PHY: 250k, 2gfsk, base
+  dir=rangetest/
+  isc=rangetest/rangetest-2gfsk.isc
+  architecture=efr32,simulation
+  demo.1.bin=../apps-bin/rangetest-2gfsk.hex
+  demo.1.arch=efr32~family[F]~performance[P]~radio[132]~flash[256k]~temp[G]~package[M]~pins[48]+BRD4252A
+  Flex: This is a customizable Range Test Sample Application that demonstrates
+  over the air range of the EFR32 with the following PHY: 
+    frequency: 2.4GHz 
+    deviation: 125k 
+    modulation: 2gfsk 
+    bitrate: 250 Kbps
+}
+
+simple-rail-without-hal-efr32 {
+  name=RAIL: Simple Sample Application without HAL for EFR32
+  dir=simple_rail_without_hal/
+  isc=simple_rail_without_hal/simple_rail_without_hal.isc
+  architecture=efr32,simulation
+  Flex: This is a Silicon Labs Simple RAIL without HAL sample application.
+}
+
+simple-rail-with-hal-efr32 {
+  name=RAIL: Simple Sample Application with HAL for EFR32
+  dir=simple_rail_with_hal/
+  isc=simple_rail_with_hal/simple_rail_with_hal.isc
+  architecture=efr32,simulation
+  Flex: This is a Silicon Labs Simple RAIL with HAL sample application.
+}
+
+simpletrx-efr32 {
+  name=RAIL: Simple TRx Sample Application for EFR32
+  dir=simple_trx/
+  demo.1.bin=../apps-bin/simple_trx.hex
+  demo.1.arch=efr32~family[F]~performance[P]~radio[132]~flash[256k]~temp[G]~package[M]~pins[48]+BRD4252A
+  isc=simple_trx/simple_trx.isc
+  architecture=efr32,simulation
+  include=main.c
+  Flex: This is a Silicon Labs Simple Transmit and Receive application demo.
+  It is an example application which demonstrates the simplest transmit and receive
+  sample application based on RAIL with the following PHY:
+    frequency: 2.4GHz 
+    deviation: 500k 
+    modulation: 2gfsk 
+    bitrate: 1 Mbps
+}
